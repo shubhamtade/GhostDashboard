@@ -1,10 +1,12 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { supabase } from "../supabaseClient";
+import { useNavigate } from "react-router-dom";
 
 const AuthContext = createContext();
 
 export const AuthContextProvider = ({ children }) => {
   const [session, setSession] = useState(undefined);
+  const navigate = useNavigate();
 
   // Sign up
   const signUpNewUser = async (email, password) => {

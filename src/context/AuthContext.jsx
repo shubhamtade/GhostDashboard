@@ -6,7 +6,6 @@ const AuthContext = createContext();
 
 export const AuthContextProvider = ({ children }) => {
   const [session, setSession] = useState(undefined);
-  const navigate = useNavigate();
 
   // Sign up
   const signUpNewUser = async (email, password) => {
@@ -100,7 +99,6 @@ export const AuthContextProvider = ({ children }) => {
       console.error("Error signing out:", error);
     } else {
       setSession(null); // Reset session after sign-out
-      navigate("/");
     }
   }
 

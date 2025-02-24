@@ -98,6 +98,7 @@ export const AuthContextProvider = ({ children }) => {
       console.error("Error signing out:", error);
     } else {
       setSession(null); // Reset session after sign-out
+      navigate("/");
     }
   }
 

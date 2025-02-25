@@ -59,30 +59,33 @@ const Dashboard = () => {
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="flex justify-between items-center mb-8">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3 md:gap-4">
             {theme === "dark" ? (
               <img
                 src="https://cdn.prod.website-files.com/66bcc6176bc9596c06805bd7/66c18811955d1df2716711d6_Group%204.svg"
                 alt="PandaMatch.io Logo"
-                className="h-10"
+                className="h-5 md:h-10 "
               />
             ) : (
-              <img src={Logo} className="h-[40px] w-10" />
+              <img src={Logo} className="h-5 md:h-10 " />
             )}
-            <h1 className="text-3xl font-bold">PandaMatch.io</h1>
+            <h1 className="text-xl md:text-3xl font-bold">PandaMatch.io</h1>
           </div>
           <div className="flex items-center gap-4">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-300"
+              className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-300"
             >
               {theme === "light" ? "🌙" : "☀️"}
             </button>
-            <button
-              onClick={handleSignOut}
-              className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition-colors"
-            >
-              Logout
+
+            <button>
+              <img
+                onClick={handleSignOut}
+                src="https://cdn-icons-png.freepik.com/512/14871/14871394.png?ga=GA1.1.1078513937.1734710885"
+                className=" w-10 md:w-12  p-1 text-sm rounded-full  opacity-80 hover:opacity-100 duration-300"
+                alt="Logout"
+              />
             </button>
           </div>
         </div>

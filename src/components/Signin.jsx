@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
-import StarBorder from "./atoms/StarBorder ";
 // import "./Signin.css"; // Ensure to import the CSS file
 
 const Signin = () => {
@@ -50,9 +49,9 @@ const Signin = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="bg-black/50   border-2 w-full px-2 md:w-[80%] lg:w-[50%] h-[80%] text-white">
-        <form onSubmit={handleSignIn} className="max-w-md m-auto pt-24">
-          <h2 className="font-bold pb-2">Sign in</h2>
+      <div className="bg-black/50   border-2 border-white/50 rounded-xl w-full px-2 md:w-[80%] lg:w-[50%] h-[80%] text-white">
+        <form onSubmit={handleSignIn} className="max-w-md m-auto pt-24 ">
+          <h2 className="font-bold text-3xl pb-2">Sign in</h2>
           <p>
             Don't have an account yet?{" "}
             <Link to="/signup" className="text-blue-500">
@@ -62,15 +61,15 @@ const Signin = () => {
           <div className="flex flex-col py-4">
             <input
               onChange={(e) => setEmail(e.target.value)}
-              className="p-3 mt-2"
+              className="p-3 mt-2 text-black outline-none"
               type="email"
               placeholder="Email"
             />
           </div>
-          <div className="flex flex-col py-4">
+          <div className="flex flex-col py-">
             <input
               onChange={(e) => setPassword(e.target.value)}
-              className="p-3 mt-2"
+              className="p-3 mt-2  outline-none text-black"
               type="password"
               placeholder="Password"
             />
@@ -123,7 +122,9 @@ const Signin = () => {
             </button>
           </div>
 
-          {error && <p className="text-red-600 text-center pt-4">{error}</p>}
+          {error && (
+            <p className="text-red-600 text-center pt-4 capitalize">{error}</p>
+          )}
         </form>
       </div>
     </div>

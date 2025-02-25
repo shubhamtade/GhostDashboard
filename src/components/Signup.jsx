@@ -47,9 +47,9 @@ const Signup = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="bg-black/50   border-2 w-full px-2 md:w-[80%] lg:w-[50%] h-[80%] text-white">
+      <div className="bg-black/50    border-2 border-white/50 rounded-xl w-full px-2 md:w-[80%] lg:w-[50%] h-[80%] text-white">
         <form onSubmit={handleSignUp} className="max-w-md m-auto pt-24">
-          <h2 className="font-bold pb-2">Sign up today!</h2>
+          <h2 className="font-bold text-3xl pb-2">Sign up today!</h2>
           <p>
             Already have an account?{" "}
             <Link to="/" className="text-blue-500">
@@ -59,7 +59,7 @@ const Signup = () => {
           <div className="flex flex-col py-4">
             <input
               onChange={(e) => setEmail(e.target.value)}
-              className="p-3 mt-2"
+              className="p-3 mt-2  outline-none text-black"
               type="email"
               placeholder="Email"
               required
@@ -68,7 +68,7 @@ const Signup = () => {
           <div className="flex flex-col py-4">
             <input
               onChange={(e) => setPassword(e.target.value)}
-              className="p-3 mt-2"
+              className="p-3 mt-2  outline-none text-black"
               type="password"
               placeholder="Password"
               required

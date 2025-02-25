@@ -4,6 +4,7 @@ import Signup from "./components/Signup";
 import Signin from "./components/Signin";
 import Dashboard from "./routes/Dashboard";
 import PrivateRoute from "./components/PrivateRoute";
+import PageNotFound from "./components/404/PageNotFound";
 
 export const router = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -17,4 +18,5 @@ export const router = createBrowserRouter([
       </PrivateRoute>
     ),
   },
+  { path: "*", element: <PageNotFound /> },
 ]);

@@ -19,3 +19,19 @@
   background-size: 800% 800%;
   animation: gradient-bg 15s ease infinite;
 }
+
+@keyframes shine {
+  0% {
+    filter: brightness(0.5);
+  }
+  50% {
+    filter: brightness(1.5);
+  }
+  100% {
+    filter: brightness(0.5);
+  }
+}
+
+.shining-effect {
+  animation: shine 2s infinite;
+}
